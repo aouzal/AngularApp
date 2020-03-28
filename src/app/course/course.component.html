@@ -1,0 +1,19 @@
+
+<h2 [style.color]="isActive?'blue':'red'">{{title}}</h2>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">Title       :{{course.title | uppercase |resume:6}}</li>
+        <li class="list-group-item">Price       :{{course.price |number:'2.2-2'}}</li>
+        <li class="list-group-item">Avis        :{{course.avis}}</li>
+        <li class="list-group-item">Course      :{{course.author}}</li>
+        <li class="list-group-item">Created Date:{{course.createdDate |date :'yyyy-mm-dd'}}</li>
+    </ul>
+
+</div>
+<div>
+    <input type="radio" [style.enable]="false">
+        
+
+</div>
+
+<button (click)="onFav()" class="btn btn-primary" [class.active]="isActive"  > OK</button>

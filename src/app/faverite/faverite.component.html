@@ -1,0 +1,18 @@
+
+<h3>Faverite</h3>
+<button class="btn "
+ (click)="onFav()" 
+ 
+ [ngClass]="{
+     'btn-primary':!isSelected,
+     'btn-danger' :isSelected
+ }"
+ [ngStyle]="{
+     'color':isSelected?'blue':'green'
+ }"
+
+ 
+ >
+ Click on me !
+</button>
+

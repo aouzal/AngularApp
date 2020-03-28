@@ -1,0 +1,86 @@
+<!-- <h1>Hello World !!</h1> -->
+<!-- <course></course> -->
+
+<!-- <first></first> -->
+
+<!-- 
+
+<br>
+<br>
+<panel>
+    <h1 class="header">Hello World !!</h1>
+    <first class="body"></first>
+</panel> -->
+
+<!-- <faverite
+[isFavorite]="post.isFavorite"
+ (change)="onChangefaverite($event)"
+></faverite> -->
+
+<!-- directive ngIF -->
+
+<!-- <h1 *ngIf="courses.length>0; then listcours else pasdecours">
+
+</h1>
+<ng-template #listcours>
+
+    <h1>Liste des cours</h1>
+
+</ng-template>
+
+<ng-template #pasdecours>
+
+    <h1>Pas de cours</h1>
+
+</ng-template> -->
+
+<!-- directive hidden -->
+
+<!-- <h1 [hidden]="!post.isFavorite">Liste des cours</h1> -->
+
+<!-- directive ngSwitchCase -->
+
+<!-- <ul class=" nav nav-pills">
+    <li class="nav-item ">
+        <a class="nav-link "  [class.active]="selectedCour=='Laravel'" (click)="selectedCour='Laravel'">Laravel</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedCour=='Angular'" (click)="selectedCour='Angular'">Angular</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedCour=='React'" (click)="selectedCour='React'">React</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="selectedCour">
+    <p *ngSwitchCase="'Laravel'">Cour Laravel</p>
+    <p *ngSwitchCase="'Angular'">Cour Angular</p>
+    <p *ngSwitchCase="'React'">Cour React js</p>
+</div> -->
+
+<!-- directive ngFor -->
+
+<!-- <ul>
+    <button class="btn btn-success" (click)="init()"> Load</button>
+    <li *ngFor="let cour of courses;last as i">
+          {{cour}}
+          <button class="btn btn-danger" (click)="DeleteCours(cour)"> delete</button>
+          <button class="btn btn-warning" (click)="EditCours(cour)"> Edit</button>
+    </li>
+</ul> -->
+
+<!-- {{post.author?.name}} -->
+
+<!-- <input type="text" InputFormat> -->
+
+<br>
+
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+            <navbar></navbar>
+        <!-- <contact-form></contact-form> -->
+        <!-- <sign-up-form></sign-up-form> -->
+        <!-- <posts> </posts> -->
+        <router-outlet></router-outlet>
+    </div> 
+</div>

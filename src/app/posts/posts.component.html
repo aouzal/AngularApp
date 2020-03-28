@@ -1,0 +1,33 @@
+<p>posts works!</p>
+
+
+<form>
+    <legend>Add New Post</legend>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input [(ngModel)]="post.title" name="title" type="text" class="form-control" id="title" placeholder="Title">
+    </div>
+
+    <div class="form-group">
+        <label for="Body">Body</label>
+        <textarea [(ngModel)]="post.body" name="body" type="text" class="form-control" id="Body" placeholder="Body"></textarea>
+
+    </div>
+
+    <button class="btn btn-primary" (click)="createPost()" *ngIf="status">Add</button>
+    <button class="btn btn-danger" (click)="updatePost()" *ngIf="!status">Update</button>
+</form>
+<br>
+<p>{{post|json}}</p>
+
+<div class="ul list-group">
+    <li class="list-group-item" *ngFor="let post of posts">
+        <h4>{{post.title}}</h4>
+        <p>{{post.body}}</p>
+        <div align="right">
+            <button (click)="editPost(post)" class="btn btn-warning">Edit</button>
+            <button (click)="deletePost(post)" class="btn btn-danger">Delete</button>
+        </div>
+    </li>
+</div>
